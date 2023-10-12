@@ -3,7 +3,7 @@ import NFTCard from './NFTCard';
 import Link from 'next/link';
 const marketAddress = process.env.NEXT_PUBLIC_MARKETPLACE_ADDRESS;
 
-function getLists() {
+function GetLists() {
   const {contract} = useContract(marketAddress, "marketplace-v3");
   const { data, isLoading, error} = useValidDirectListings(contract);
   if (!data) {return []}
@@ -11,7 +11,7 @@ function getLists() {
 }
 
 const Listings = ({search}) => {
-  let lists = getLists();
+  let lists = GetLists();
   const showItem = (listItem) => {
     if (search != 'all' ) {
       if (String(listItem.asset.description).toLowerCase().includes(search.toLowerCase()) ||

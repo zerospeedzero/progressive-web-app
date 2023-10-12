@@ -1,16 +1,20 @@
+
 import { useAddress} from "@thirdweb-dev/react";
 import Listings from "./../../components/Listings";
 import { useRouter } from "next/router";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 
-export default function() {
+export default function Search() {
+  const [search, setSearch] = useState('');
   const address = useAddress();
-  console.log(address)
   const router = useRouter()
-  const { search } = router.query
+  console.log(address)
   useEffect(()=> {
-    // if (!address) {router.push('/')}
-  },address)
+     setSearch(router.query)
+    if (!address) {router.push('/')}
+  },[])
+  // useEffect(()=> {
+  // },address)
   return (
     <>
       <Listings search={search}/>

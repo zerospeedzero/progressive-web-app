@@ -13,7 +13,7 @@ export default function Header() {
       }))
     }
     return () => {
-      if (vantaEffect) vantaEffect.destroy()
+      // if (vantaEffect) vantaEffect.destroy
     }
   }, [vantaEffect])
 
@@ -21,7 +21,7 @@ export default function Header() {
         <>
           <script
             src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"
-            strategy="beforeInteractive"
+            async
             onLoad={() =>
               console.log(`script loaded correctly, window.FB has been populated`)
             }
