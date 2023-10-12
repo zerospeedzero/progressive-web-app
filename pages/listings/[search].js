@@ -8,9 +8,9 @@ export default function Search() {
   const address = useAddress();
   const router = useRouter()
   const scope = router.query.search
-  if (!address) {router.push('/')}
-  // useEffect(()=> { 
-  // },[address])  
+  useEffect(()=> { 
+    if (!address) {router.push('/')}
+  },[address])  
   return (
     <>
       <Listings scope={scope}/>
