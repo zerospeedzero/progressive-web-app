@@ -1,7 +1,7 @@
 import { useAddress, useContract, useOwnedNFTs } from "@thirdweb-dev/react";
 import styles from "../styles/Home.module.css";
 // import { NFT_CONTRACT_ADDRESS } from "../consts/addresses";
-import NFTCard from "../components/NFTCcard";
+import NFTCard from "../components/NFTCcard.tsx";
 
 export default function NFTs() {
     const address = useAddress();

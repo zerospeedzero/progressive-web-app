@@ -9,16 +9,16 @@ export default function Home() {
   return (
     <div>
       {address ? (
-        <div >
+        <div className='flex flex-col justify-center items-center'>
           <MediaRenderer
             src={contractMetadata?.image}
-            width="auto"
-            height="60%"
+            width="40%"
+            height="50%"
             style={{
               borderRadius: "20px",
               maxWidth: "500px",
             }}
-            />
+          />
           <h1>{contractMetadata?.name}</h1>
           <Web3Button
             contractAddress={process.env.NEXT_PUBLIC_CONTRACT_ADDRESS || ''}
@@ -29,8 +29,8 @@ export default function Home() {
           </Web3Button>
         </div>
       ) : (
-        <div className="">
-          <ConnectWallet btnTitle="Login" />
+        <div className="h-[80vh] flex flex-col justify-center items-center">
+          <ConnectWallet className="testing" btnTitle="Login"/>
         </div>
       )}
     </div>

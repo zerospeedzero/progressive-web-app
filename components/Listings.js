@@ -1,16 +1,11 @@
 import { useValidDirectListings, useContract } from "@thirdweb-dev/react";
 import NFTCard from './NFTCard';
 import Link from 'next/link';
-// const marketAddress = "0x75B9cb48afE6D68Dc4ed40e79741eA8Ca71AC02d"
 const marketAddress = process.env.NEXT_PUBLIC_MARKETPLACE_ADDRESS;
 
 function getLists() {
   const {contract} = useContract(marketAddress, "marketplace-v3");
   const { data, isLoading, error} = useValidDirectListings(contract);
-  console.log('start')
-  console.log(data)
-  console.log(error)
-  console.log('end')
   if (!data) {return []}
   return data
 }

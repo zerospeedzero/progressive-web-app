@@ -12,11 +12,11 @@ const Navbar = () => {
 
   return (
     <motion.div className='fixed bottom-0 w-full p-4 flex justify-between items-center'>
-      <Link className="flex flex-col justify-center items-center" href="/">
-          <FaRegHandPaper size={46} /><p>Claim</p>
+      <Link className="flex flex-col justify-center items-center" href="/listings/all">
+          <FaRegHandPaper size={46} /><p>MarketPlace</p>
       </Link>
       <Link className="flex flex-col justify-center items-center" href="/editiondrop">
-          <SiHiveBlockchain size={46} /><p>NFT</p>
+          <SiHiveBlockchain size={46} /><p>NFT(s)</p>
       </Link>
       <div>
         {address ? (
