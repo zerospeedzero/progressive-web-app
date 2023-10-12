@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { ConnectWallet, MediaRenderer, Web3Button, useAddress, useContract, useContractMetadata} from "@thirdweb-dev/react";
-
+import {motion} from 'framer-motion'
 export default function Home() {
   const address = useAddress();
   const { contract } = useContract(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS);
   const { data: contractMetadata } = useContractMetadata(contract);
-  console.log(contractMetadata)
+  // console.log(contractMetadata)
   return (
     <div>
       {address ? (
@@ -29,9 +29,13 @@ export default function Home() {
           </Web3Button>
         </div>
       ) : (
-        <div className="h-[80vh] flex flex-col justify-center items-center">
+        <motion.div className="h-[80vh] flex flex-col justify-center items-center"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 3, duration: 1 }}
+        >
           <ConnectWallet className="testing" btnTitle="Login"/>
-        </div>
+        </motion.div>
       )}
     </div>
   );

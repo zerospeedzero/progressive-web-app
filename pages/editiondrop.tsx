@@ -2,10 +2,11 @@ import { useAddress, useContract, useOwnedNFTs } from "@thirdweb-dev/react";
 import styles from "../styles/Home.module.css";
 // import { NFT_CONTRACT_ADDRESS } from "../consts/addresses";
 import NFTCard from "../components/NFTCcard";
-
+import Router from "next/router";
 export default function NFTs() {
     const address = useAddress();
-
+    const router = Router;
+    if (!address) {router.push('/')}
     const {
         contract
     } = useContract(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS);

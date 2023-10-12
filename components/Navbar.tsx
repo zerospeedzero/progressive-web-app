@@ -11,15 +11,18 @@ const Navbar = () => {
   const address = useAddress()
 
   return (
-    <motion.div className='fixed bottom-0 w-full p-4 flex justify-between items-center'>
+    <motion.div className='fixed bottom-0 w-full p-4 flex justify-between items-center text-white'
+      initial={{ opacity: 0, scale: 1.1 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ delay: 2, duration: 2 }}
+    >
       <Link className="flex flex-col justify-center items-center" href="/listings/all">
-          <FaRegHandPaper size={46} /><p>MarketPlace</p>
+          <FaRegHandPaper size={46} /><p>Market</p>
       </Link>
       <Link className="flex flex-col justify-center items-center" href="/editiondrop">
           <SiHiveBlockchain size={46} /><p>NFT(s)</p>
       </Link>
-      <div>
-        {address ? (
+        {address && (
             <ConnectWallet
                 btnTitle="Login"
                 detailsBtn={() => {
@@ -31,11 +34,7 @@ const Navbar = () => {
                     )
                 }}
             />
-        ) : (
-          <CgProfile size={46} />
         )}
-      </div>
-
     </motion.div>
   )
 }
