@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useAddress, useContract, useOwnedNFTs } from "@thirdweb-dev/react";
 import styles from "../styles/Home.module.css";
 // import { NFT_CONTRACT_ADDRESS } from "../consts/addresses";
-import NFTCard from "../components/NFTCcard";
+import NFTCcard from "../components/NFTCcard";
 import Router from "next/router";
 export default function NFTs() {
     const address = useAddress();
@@ -28,7 +28,7 @@ export default function NFTs() {
                 ownedNFTs && ownedNFTs.length > 0 ? (
                     ownedNFTs.map((nft) => {
                         return (
-                            <NFTCard
+                            <NFTCcard
                                 key={nft.metadata.id}
                                 nft={nft}
                                 quantity={parseInt(nft.quantityOwned!)}

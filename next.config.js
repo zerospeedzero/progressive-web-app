@@ -16,5 +16,9 @@ const withPWA = require("next-pwa")({
 module.exports = withPWA({
   basePath: "",
   reactStrictMode: true,
-  images: { unoptimized: true },
+  images: { unoptimized: true,
+    domains: [
+      'lh3.googleusercontent.com', 'gateway.ipfscdn.io'
+    ],    
+  },
 });

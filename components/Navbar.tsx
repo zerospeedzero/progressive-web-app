@@ -16,18 +16,20 @@ const Navbar = () => {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 2, duration: 2 }}
     >
-      <Link className="flex flex-col justify-center items-center" href="/listings/all">
-          <FaRegHandPaper size={46} /><p>Market</p>
+      <Link className="flex flex-col justify-center items-center cursor-pointer" href="/listings/all">
+          <motion.div whileHover={{scale: 1.2, transition: {duration: 0.2, ease: 'easeInOut'}}}><FaRegHandPaper size={46} /><p>Market</p></motion.div>
       </Link>
-      <Link className="flex flex-col justify-center items-center" href="/editiondrop">
-          <SiHiveBlockchain size={46} /><p>NFT(s)</p>
+      <Link className="flex flex-col justify-center items-center cursor-pointer" href="/editiondrop">
+          <motion.div whileHover={{scale: 1.2, transition: {duration: 0.2, ease: 'easeInOut'}}}><SiHiveBlockchain size={46} /><p>NFT(s)</p></motion.div>
       </Link>
         {address && (
             <ConnectWallet
                 btnTitle="Login"
                 detailsBtn={() => {
                     return (
-                        <motion.div>
+                        <motion.div whileHover={{scale: 1.2, transition: {duration: 0.2, ease: 'easeInOut'}}}
+                          className='cursor-pointer'
+                        >
                             <CgProfile size={46} />
                             <p>Profile</p>
                         </motion.div>

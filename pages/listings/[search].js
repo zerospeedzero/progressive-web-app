@@ -13,7 +13,7 @@ export default function Search() {
   },[address])  
   return (
     <>
-      <Listings scope={scope}/>
+      {address &&(<Listings scope={scope}/>)}
     </>
   )
 }
