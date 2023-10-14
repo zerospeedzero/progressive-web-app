@@ -5,10 +5,10 @@ import { easeInOut, motion } from 'framer-motion';
 const NFTCard = ({listItem}) => {
   return (
     <motion.div className="relative flex h-[400px] w-[300px] cursor-pointer flex-col rounded-lg bg-white shadow-lg transition-all duration-300 hover:shadow-2xl "
-      whileHover={{ scale: 1.05, transition: { duration: 0.05 } }}
+      whileHover={{ scale: 1.05, transition: { duration: 0.1, ease: easeInOut }, backgroundColor: 'rgba(240,240,240,1)', boxShadow: '0px 0px 10px 5px rgba(0,0,0,0.1)' }}
     >
       <div className="h-3/4 overflow-hidden">
-        <Image className="rounded-t-lg object-cover p-4" src={listItem.asset.image} title={'Prompt: ' + listItem.asset.description + ' \n\nCreator address: ' + listItem.creatorAddress} height={340} width={340} alt='nft'/>
+        <Image className="rounded-t-lg object-cover p-4" src={listItem.asset.image} title={'Input for SD tokenization: ' + listItem.asset.description + ' \n\nCreator address: ' + listItem.creatorAddress + ' \n\nContract address: ' + listItem.assetContractAddress} height={340} width={340} alt='nft'/>
       </div>
       <div className="flex h-1/4 flex-col justify-between p-4 text-black">
         <div className="flex justify-between">

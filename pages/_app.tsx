@@ -1,5 +1,5 @@
 import type { AppProps } from "next/app";
-import { ThirdwebProvider, paperWallet, smartWallet } from "@thirdweb-dev/react";
+import { ThirdwebProvider, metamaskWallet, paperWallet, smartWallet } from "@thirdweb-dev/react";
 import "../styles/globals.css";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
@@ -19,7 +19,6 @@ function MyApp({ Component, pageProps }: AppProps) {
       }))
     }
     return () => {
-      // if (vantaEffect) vantaEffect.destroy
     }
   }, [vantaEffect])
   const walletConfig = paperWallet({
@@ -36,6 +35,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         clientId={process.env.NEXT_PUBLIC_TEMPLATE_CLIENT_ID}
         activeChain={Sepolia}
         supportedWallets={[
+          // metamaskWallet(),
           smartWalletConfig
         ]}
         >

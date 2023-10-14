@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react'
-// import WAVES from 'vanta/dist/vanta.waves.min'
-import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 
@@ -12,9 +10,7 @@ export default function Header() {
       if(Number(window.scrollY) >= 40) {
         setColor('#000000')
         setTextColor('#000000')
-        // console.log(window.scrollY)
       } else {
-        // console.log(color)
         setColor('transparent')
         setTextColor('#ffffff')
       }
@@ -24,8 +20,8 @@ export default function Header() {
 
     return(
         <>
+          <div className="fixed w-screen h-[7rem] z-10 opacity-80" style={{backgroundColor: `${color}`, color: `${textColor}`}}></div>
           <motion.div className='fixed w-full flex justify-start items-center p-4 z-10'
-            style={{backgroundColor: `${color}`, color: `${textColor}`}}
             initial={{ x: '48vw', y:'48vh'}}
             animate={{ x: '0', y:'0'}}
             transition={{ delay: 0.8, duration: 2, ease: 'easeInOut'}}
@@ -39,7 +35,7 @@ export default function Header() {
                 transition={{ delay: 0.8, duration: 2, type: 'spring', stiffness: '30', ease: 'easeInOut'}}
               />
             </Link>
-            <motion.p className='text-white text-3xl sm:text-4xl ml-4'
+            <motion.p className='text-white text-3xl  ml-4'
               initial={{ opacity: 0.6, y: '120vh', scale: 2 }}
               animate={{ opacity: 1, y:'0vw', scale: 1 }}
               transition={{ delay: 2, duration: 0.6, type: 'spring', stiffness: '30', ease: 'easeInOut' }}
