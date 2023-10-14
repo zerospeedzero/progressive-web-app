@@ -8,7 +8,6 @@ type NFTProps = {
 };
 
 export default function NFTCard({ nft, quantity }: NFTProps) {
-    console.log(nft)
     return (
         <motion.div className="relative"
             initial={{ opacity: 0, scale: 0.1, rotate:0, }}

@@ -3,8 +3,6 @@ import { ThirdwebProvider, metamaskWallet, paperWallet, smartWallet } from "@thi
 import "../styles/globals.css";
 import Header from "../components/Header";
 import Navbar from "../components/Navbar";
-// const activeChain = "goerli";
-// const activeChain = "Sepolia";
 import { Sepolia } from "@thirdweb-dev/chains";
 import WAVES from 'vanta/dist/vanta.waves.min'
 import { useState, useEffect, useRef } from 'react'

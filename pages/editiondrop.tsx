@@ -13,7 +13,6 @@ export default function NFTs() {
       },[address])  
     const {contract} = useContract(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS);
     const {data: ownedNFTs, isLoading: ownedNFTsLoading} = useOwnedNFTs(contract, address);
-
     return (
         <motion.div className="h-screen w-screen text-white flex flex-col justify-center items-center">
             {!ownedNFTsLoading &&<h3 className="text-2xl mb-4">Your owned NFT(s)</h3>}

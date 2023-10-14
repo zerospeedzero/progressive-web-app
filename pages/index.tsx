@@ -5,8 +5,6 @@ export default function Home() {
   const address = useAddress();
   const { contract } = useContract(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS);
   const { data: contractMetadata } = useContractMetadata(contract);
-  console.log(process.env.NEXT_PUBLIC_CONTRACT_ADDRESS )
-  console.log(contract)
   return (
     <>
       {address ? (
