@@ -1,3 +1,4 @@
+'use client';
 import { useValidDirectListings, useContract } from "@thirdweb-dev/react";
 import NFTCard from './NFTCard';
 import Link from 'next/link';
