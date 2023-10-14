@@ -14,11 +14,30 @@ export default function Home() {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ delay:0.2, duration: 1, ease: "easeInOut", type: "spring", bounce: 0.25 }}
           >
-            <img
+            {/* <img
               className='w-[300px] h-[300px] rounded-lg m-4 shadow-md'
               src={contractMetadata?.image}
               alt="SAIT NMP 2023 Alumni Edition Drop NFT"
+            /> */}
+            <MediaRenderer
+              src={contractMetadata?.image}
+              width="300"
+              height="300"
+              style={{
+                borderRadius: "20px",
+                padding: "1rem",
+                boxShadow: "0 0 1rem rgba(0,0,0,0.7)", 
+              }}
             />
+            <MediaRenderer
+          src={contractMetadata?.image}
+          width="auto"
+          height="60%"
+          style={{
+            borderRadius: "20px",
+            maxWidth: "500px",
+          }}
+        />            
             <motion.div
               whileHover={{scale: 1.2, rotate: 360,transition: {duration: 0.2, ease: 'easeInOut'}}}
             >
