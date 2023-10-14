@@ -17,8 +17,8 @@ module.exports = withPWA({
   basePath: "",
   reactStrictMode: true,
   images: { unoptimized: true,
-    domains: [
-      'lh3.googleusercontent.com', 'gateway.ipfscdn.io', '*.ipfscdn.io'
-    ],    
+    // domains: [
+    //   'lh3.googleusercontent.com', 'gateway.ipfscdn.io', '*.ipfscdn.io'
+    // ],    
   },
 });
