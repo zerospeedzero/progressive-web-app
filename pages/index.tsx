@@ -15,7 +15,7 @@ export default function Home() {
             transition={{ delay:0.2, duration: 1, ease: "easeInOut", type: "spring", bounce: 0.25 }}
           >
             <img
-              className='w-[300px] h-[300px] rounded-lg m-4 shadow-md'
+              className='w-[230px] h-[230px] rounded-lg m-4 shadow-md'
               src={contractMetadata?.image}
               alt="SAIT NMP 2023 Alumni Edition Drop NFT"
             />
@@ -52,7 +52,7 @@ export default function Home() {
             <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50 rounded-lg -z-10'></div>
             <h3 className='text-white text-2xl p-4'>{contractMetadata?.name}</h3>
             <p className="text-white mb-4">Claiming the &quot;SAIT NMPD 2023 Alumni Edition Drop NFT&quot; is entirely free. If you have come across this website, it is likely that you are one of my classmates or instructors.</p>
-            <p className="text-white mb-8">Please secure this NFT in your virtual wallet, linked to your preferred authentication method. This NFT may serve as a potential membership credential for our forthcoming alumni community. The possibilities are intriguing.</p>
+            <p className="text-white mb-8">Please secure this NFT in your virtual wallet, linked to your preferred authentication method. This NFT may be a potential membership credential for our forthcoming alumni community. The possibilities are intriguing.</p>
           </motion.div>
         </div>
       ) : (

@@ -36,7 +36,7 @@ const Listings = (props) => {
           >
             <div className='absolute top-0 left-0 right-0 bottom-0 bg-black opacity-50 rounded-lg -z-10'></div>
             <h3 className="text-xl mb-4">SAIT NMPD independent study collection</h3>
-            <p>This represents an NFT collection created for an independent study by me. 33 graphic designs have been generated utilizing the state-of-the-art Stable Diffusion 2.1 text-to-image generation method within 10 minutes. ControlNet has been harnessed to impact the iterative U-NeT denoising process, employing a facial vector image crafted through Adobe Illustrator. The resultant images have been shaped by this influence throughout the processing stages.</p>
+            <p>This represents an NFT collection created for an independent study by me. 33 graphic designs were generated using the state-of-the-art Stable Diffusion 2.1 text-to-image generation method within 10 minutes. ControlNet has been harnessed to impact the iterative U-NeT denoising process, employing a facial vector image crafted through Adobe Illustrator. This influence has shaped the resultant images throughout the processing stages.</p>
           </motion.div>
           <motion.div className="mx-auto grid max-w-fit flex-1 grid-cols-1 gap-8 p-10 pt-24 md:grid-cols-2 md:pt-10 lg:grid-cols-3 xl:grid-cols-4 sxl:grid-cols-5"
             initial={{ opacity: 0, scale: 0.5 }}
