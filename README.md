@@ -14,7 +14,7 @@ The context diagram below illustrates the entities within the solution and demon
 7. Gmail - Receiving authentication codes from Thirdweb for secret code authentication.
 
 ## Use cases
-Use Case 1: When users visits the front page, they will see an icon adjacent to the navigation bar, it enables the Progressive Web App (PWA) installation on both desktop and mobile devices. This feature aims to deliver a native app-like experience to the end user.
+Use Case 1: When users visit the front page, they will see an icon adjacent to the navigation bar, it enables the Progressive Web App (PWA) installation on both desktop and mobile devices. This feature aims to deliver a native app-like experience to the end user.
  
 Use Case 2: On the front page, when a user is not authenticated, they will see the login button, and the page will adapt to various screen sizes.
  
