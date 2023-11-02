@@ -28,7 +28,7 @@ const NFTCard = ({listItem}) => {
               <Image height = {16} width= {16} src='/weth-logo.svg' alt='weth'/>
               <div className="">
                 {/* Price is randomly generated since the initial price is set to zero for all the NFTs for demo purpose.*/}
-                {listItem.currencyValuePerToken?.displayValue + 1  }
+                {listItem.currencyValuePerToken?.displayValue  }
               </div>
             </div>
           </div>

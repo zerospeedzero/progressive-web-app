@@ -21,7 +21,7 @@ export default function NFTCard({ nft, quantity }: NFTProps) {
             /> */}
             <motion.img
                 className="w-[400px] h-[400px] rounded-lg shadow-md"
-                src={nft.metadata.image || ''}
+                src='/images/edition.png'
                 alt="name"
             />
             <p className="absolute bottom-4 left-4 bg-black p-1">{nft.metadata.name}</p>
