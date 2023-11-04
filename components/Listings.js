@@ -10,35 +10,43 @@ const Listings = (props) => {
   const search = props.scope
   const [lists, setLists] = useState();
   const {contract} = useContract(marketAddress, "marketplace-v3");
-  // const { data, isLoading, error} = useValidDirectListings(contract);
+  const { data, isLoading, error} = useValidDirectListings(contract);
+  useEffect(()=> {
+    setLists(data);
+  }, [data])
+  // setLists(data);
 
   useEffect(()=> {
-    const data = []
-    for(let i = 1; i <= 33; i++){
-      data.push({
-        asset: {
-          description: "Input for SD tokenization " + i,
-          name: "IS-" + i,
-          image: "/images/image-" + i + ".png",
-          assetContractAddress: "0xf1FE1e075c8635BDa5a70B8141c4a2116c4C3566",
-          // collection: {
-          //   name: "Collection: IS" 
-          // },
-          stats: {
-            favorites: '1'
-          },
-        },
-        assetContractAddress: "0xf1FE1e075c8635BDa5a70B8141c4a2116c4C3566",
-        creatorAddress: "0xDE1a78FAEdb314a8891dA2a4D66c76d015Eb538E",
-        currencyValuePerToken: {
-          displayValue: 0.001
-        }
-      })
+    if (data && data.length > 0) {
+      setLists(data);
+    } else {
+      const data = []
+      for(let i = 1; i <= 33; i++){
+        data.push({
+          asset: {
+            description: "Input for SD tokenization " + i,
+            name: "IS-" + i,
+            image: "/images/image-" + i + ".png",
+            assetContractAddress: "0xf1FE1e075c8635BDa5a70B8141c4a2116c4C3566",
+            // collection: {
+              //   name: "Collection: IS" 
+              // },
+              stats: {
+                favorites: '1'
+              },
+            },
+            assetContractAddress: "0xf1FE1e075c8635BDa5a70B8141c4a2116c4C3566",
+            creatorAddress: "0xDE1a78FAEdb314a8891dA2a4D66c76d015Eb538E",
+            currencyValuePerToken: {
+              displayValue: "0"
+            }
+          })
+      }
+      setTimeout(() => {
+        setLists(data); 
+      }, 2000);
     }
-    setTimeout(() => {
-      setLists(data); 
-    }, 2000);
-  },[])
+  },[data])
   const showItem = (listItem) => {
     if (search != 'all' && search != null) {
       if (String(listItem.asset.description).toLowerCase().includes(search.toLowerCase()) ||
